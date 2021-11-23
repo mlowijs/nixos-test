@@ -33,12 +33,19 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Amsterdam";
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    supportedLocales = [
+      "en_US.UTF-8/UTF-8"
+      "nl_NL.UTF-8/UTF-8"
+    ];
+  };
 
   users = {
     mutableUsers = false;
 
     users.michiel = {
+      description = "Michiel Lowijs";
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" ];
       useDefaultShell = false;
