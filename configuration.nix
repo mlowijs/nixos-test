@@ -120,6 +120,7 @@
     xdg-user-dirs
     
     vscode
+    firefox-wayland
   ];
 
   services.pipewire = {
