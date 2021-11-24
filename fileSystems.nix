@@ -1,7 +1,7 @@
 {
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/42f4a716-e8cf-4f51-b4b0-491bb837cbb0";
+      device = "/dev/disk/by-label/root";
       fsType = "btrfs";
       options = [
         "subvol=@"
@@ -14,12 +14,12 @@
     };
 
     "boot" = {
-      device = "/dev/disk/by-uuid/7D11-1CD3";
+      device = "/dev/disk/by-label/boot";
       fsType = "vfat";
     };
 
     "/home" = {
-      device = "/dev/disk/by-uuid/42f4a716-e8cf-4f51-b4b0-491bb837cbb0";
+      device = "/dev/disk/by-label/root";
       fsType = "btrfs";
       options = [
         "subvol=@home"
@@ -32,7 +32,7 @@
     };
 
     "/opt" = {
-      device = "/dev/disk/by-uuid/42f4a716-e8cf-4f51-b4b0-491bb837cbb0";
+      device = "/dev/disk/by-label/root";
       fsType = "btrfs";
       options = [
         "subvol=@opt"

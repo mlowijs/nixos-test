@@ -18,7 +18,12 @@
 
     gnome.gnome-tweaks
     
-    vscode
     firefox-wayland
+
+    vscode
+    jetbrains.rider
+    dotnet-sdk
+    dotnet-runtime
+    dotnet-aspnetcore
   ];
 }

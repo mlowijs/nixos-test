@@ -9,7 +9,8 @@
       ./packages.nix
     ];
 
-  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
   powerManagement.enable = true;
   hardware.pulseaudio.enable = false;
 
