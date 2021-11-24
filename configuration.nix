@@ -11,6 +11,7 @@
 
   hardware.cpu.intel.updateMicrocode = true;
   powerManagement.enable = true;
+  hardware.pulseaudio.enable = false;
 
   boot.loader = {
     systemd-boot = {
@@ -25,6 +26,10 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.kernelModules = [ "btrfs" "i915" "thunderbolt" "amdgpu" ];
   boot.blacklistedKernelModules = [ "psmouse" ];
+
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=1h
+  '';
 
   networking.hostName = "nixostest";
   networking.wireless.enable = false;

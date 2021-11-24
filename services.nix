@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  services.logind.killUserProcesses = true;
+
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -25,6 +27,4 @@
     core-developer-tools.enable = false;
     games.enable = false;
   };
-
-  hardware.pulseaudio.enable = false;
 }
