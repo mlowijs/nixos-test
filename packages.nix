@@ -34,5 +34,6 @@
     dotnet-runtime
     dotnet-aspnetcore
     nodejs-16_x
+    postman
   ];
 }
