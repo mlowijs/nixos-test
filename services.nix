@@ -17,8 +17,14 @@
     libinput.touchpad.naturalScrolling = true;
 
     displayManager.gdm.enable = true;
-    displayManager.sessionPackages = [ pkgs.gnome.gnome-session.sessions ];
+    desktopManager.gnome.enable = true;
   };
 
-  services.upower.enable = true;
+  services.gnome = {
+    core-utilities.enable = false;
+    core-developer-tools.enable = false;
+    games.enable = false;
+  };
+
+  hardware.pulseaudio.enable = false;
 }

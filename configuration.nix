@@ -56,21 +56,9 @@
 
   fonts = {
     enableDefaultFonts = true;
-
     fonts = with pkgs; [
-      cantarell-fonts
       jetbrains-mono
     ];
-  };
-
-  xdg = {
-    portal = {
-      enable = true;
-      gtkUsePortal = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
-    };
-
-    autostart.enable = true;
   };
 
   system.stateVersion = "21.11";
