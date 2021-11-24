@@ -15,6 +15,8 @@
 
   environment.systemPackages = with pkgs; [
     btrfs-progs
+
+    gnome.gnome-tweaks
     
     vscode
     firefox-wayland
