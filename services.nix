@@ -1,7 +1,13 @@
 { pkgs, ... }:
 
 {
-  services.logind.killUserProcesses = true;
+  services.logind = {
+    killUserProcesses = true;
+    lidSwitch = "suspend-then-hibernate";
+    extraConfig = ''
+      HandlePowerKey=ignore
+    '';
+  };
 
   services.pipewire = {
     enable = true;
